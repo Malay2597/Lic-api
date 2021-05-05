@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('cors');
-// const routes = require('./routes');
+const routes = require('./routes');
 const config = require('config');
 const { dbHelper } = require('./helpers/dbHelper');
 
@@ -18,11 +18,11 @@ app.use(bodyParser.json());
   // Create connection
   await dbHelper.intitialse(config.mongoConnection);
   // Register routes
-  // try {
-  //   routes.init(app);
-  // } catch (err) {
-  //   console.log(err + 'error')
-  // }
+  try {
+    routes.init(app);
+  } catch (err) {
+    console.log(err + 'error')
+  }
 
   const appStartedCallback = () => {
     console.log(`Server listening on port ${config.expressPort}`);
