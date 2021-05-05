@@ -1,0 +1,10 @@
+{
+  "expressPort": "HTTP_PORT",
+  "mongoConnection": {
+    "server": "DB_HOST",
+    "databaseName": "DB_NAME",
+    "userName": "DB_USER",
+    "password": "DB_PASS"
+  },
+  "environment": "NODE_ENV"
+}

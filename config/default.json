@@ -1,0 +1,9 @@
+{
+  "expressPort": 5000,
+  "mongoConnection": {
+    "server":"mongodb+srv://cluster0.lbi3u.mongodb.net?retryWrites=true&w=majority",
+    "databaseName": "LicApp",
+    "userName": "Malay",
+    "password": "ygcgFYbjzWsJNFKs"
+  }
+}
