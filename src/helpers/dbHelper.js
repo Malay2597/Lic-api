@@ -18,10 +18,7 @@ const dbHelper = {
     try {
       await mongoose.connect(configParam.server, options);
       dbHelper.mongoDbConnection = mongoose.connection;
-      console.log(dbHelper.mongoDbConnection);
-      console.log('Connected to ' + configParam.server)
-      const collections = Object.keys(mongoose.connection.collections);
-      console.log(collections);
+      console.log('Connected to ' + configParam.server);
     } catch (err) {
       // dbHelper.mongoDbConnection.close();
       console.log('Mongoose connection error: ' + err);

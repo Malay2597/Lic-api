@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // Schema defination for Policy Holders
-var policyHoldersSchema = new mongoose.Schema({
+const policyHoldersSchema = new mongoose.Schema({
   PolicyNumber: {
     type: Number,
     unique: true,
@@ -28,6 +28,10 @@ var policyHoldersSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  plan: {
+    type: Number,
+    required: true
+  },
   term: {
     type: Number,
     required: true
@@ -40,7 +44,13 @@ var policyHoldersSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-
+  CreatedAt: {
+    type: Date,
+    required: true
+  },
+  DueMonth: {
+    type: [Number]
+  }
 });
 
 mongoose.model('PolicyHolder', policyHoldersSchema);
