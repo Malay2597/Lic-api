@@ -29,6 +29,6 @@ app.use(bodyParser.json());
   };
 
   // Start app
-  const server = app.listen(config.expressPort, appStartedCallback);
+  const server = app.listen(process.env.PORT || config.expressPort, appStartedCallback);
   server.setTimeout(3720000); // 1hr and 2mins
 })();
