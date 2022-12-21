@@ -25,6 +25,7 @@ const requireFiles = (directory, app) => {
 
     if (module.init) {
       console.log('-initing : ', filePath);
+      console.log('Started');
       module.init(app);
     }
   });
